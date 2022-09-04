@@ -3,6 +3,30 @@ const fs = require("fs");
 const _ = require("lodash");
 
 const server = http.createServer((req, res) => {
+  ///////////////////////////////
+  //jesli jest blad ze nie ma jakiegos modulu to wykonac
+  //npm install
+  // a potem
+  //nodeamon server
+  //na przyklad
+  ///////////////////////////////
+  ///////////////////////////////
+  //lodash
+  const num = _.random(0, 20);
+  console.log(num);
+
+  ////execute only once
+  const greet = _.once(() => {
+    console.log("hello");
+  });
+
+  greet();
+  greet();
+  //lodash end
+  ///////////////////////////////
+  ///////////////////////////////
+  ///////////////////////////////
+
   console.log("request made");
   console.log(req.url, req.method);
 
